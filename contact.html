@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты - CodeEditors</title>
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .contact-section {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .social-links a {
+      margin-right: 1rem;
+      transition: opacity 0.3s;
+    }
+    
+    .social-links a:hover {
+      opacity: 0.7;
+    }
+    
+    .form-group label {
+      font-weight: 600;
+    }
+    
+    address {
+      font-style: normal;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Шапка -->
+    <header class="navbar">
+      <section class="navbar-section">
+        <a href="index.html" class="navbar-brand">CodeEditors</a>
+      </section>
+      <section class="navbar-section">
+        <a href="index.html" class="btn btn-link">Главная</a>
+        <a href="about.html" class="btn btn-link">О проекте</a>
+        <a href="editors.html" class="btn btn-link">Редакторы</a>
+        <a href="plugins.html" class="btn btn-link">Плагины</a>
+        <a href="tutorials.html" class="btn btn-link">Обучение</a>
+        <a href="contact.html" class="btn btn-link active">Контакты</a>
+      </section>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="columns">
+      <!-- Сайдбар -->
+      <div class="column col-3">
+        <aside class="menu">
+          <p class="menu-label">Навигация</p>
+          <ul class="menu-list">
+            <li><a href="#section1" class="btn btn-link">Форма обратной связи</a></li>
+            <li><a href="#section2" class="btn btn-link">Соцсети</a></li>
+            <li><a href="#section3" class="btn btn-link">Адрес</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Контент -->
+      <div class="column col-9">
+        <h1>Контакты</h1>
+        
+        <!-- Секция 1: Форма обратной связи -->
+        <section id="section1" class="contact-section">
+          <h2>Форма обратной связи</h2>
+          <form>
+            <div class="form-group">
+              <label class="form-label" for="name">Имя</label>
+              <input class="form-input" type="text" id="name" placeholder="Ваше имя" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" placeholder="email@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="message">Сообщение</label>
+              <textarea class="form-input" id="message" placeholder="Ваше сообщение..." rows="4" required></textarea>
+            </div>
+            
+            <button class="btn btn-primary" type="submit">Отправить</button>
+          </form>
+        </section>
+
+        <!-- Секция 2: Соцсети -->
+        <section id="section2" class="contact-section">
+          <h2>Мы в социальных сетях</h2>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" class="btn btn-primary">
+              <i class="icon icon-people"></i> GitHub
+            </a>
+            <a href="https://twitter.com" target="_blank" class="btn btn-primary">
+              <i class="icon icon-people"></i> Twitter
+            </a>
+            <a href="https://vk.com" target="_blank" class="btn btn-primary">
+              <i class="icon icon-people"></i> VK
+            </a>
+          </div>
+        </section>
+
+        <!-- Секция 3: Адрес -->
+        <section id="section3" class="contact-section">
+          <h2>Наш офис</h2>
+          <address>
+            <strong>CodeEditors Inc.</strong><br>
+            ул. Советская, д. 42<br>
+            Корткерос, Россия, 123456<br>
+            📞 +7 (904) 203-43-13<br>
+            📧 bukhich@gmail.com
+          </address>
+          <div class="map-container" style="margin-top: 1rem;">
+            <iframe 
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2b3c4d5e6f7g8h9i0j&amp;source=constructor" 
+              width="100%" 
+              height="300" 
+              frameborder="0">
+            </iframe>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="section">
+      <div class="divider"></div>
+      <div class="container text-center">
+        <p>© 2025 CodeEditors. Все права защищены.</p>
+        <p>Следите за нами в соцсетях: 
+          <a href="https://github.com" class="btn btn-link">GitHub</a>
+          <a href="https://twitter.com" class="btn btn-link">Twitter</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

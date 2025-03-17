@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Плагины - CodeEditors</title>
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .plugins-section {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .plugin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    
+    .plugin-card {
+      padding: 1.5rem;
+      background: white;
+      border-radius: 8px;
+      transition: transform 0.2s;
+      border: 1px solid #eee;
+    }
+    
+    .plugin-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .plugin-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .plugin-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 1rem;
+      border-radius: 6px;
+    }
+    
+    .download-btn {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .editor-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      background: #5755d9;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Шапка -->
+    <header class="navbar">
+      <section class="navbar-section">
+        <a href="index.html" class="navbar-brand">CodeEditors</a>
+      </section>
+      <section class="navbar-section">
+        <a href="index.html" class="btn btn-link">Главная</a>
+        <a href="about.html" class="btn btn-link">О проекте</a>
+        <a href="editors.html" class="btn btn-link">Редакторы</a>
+        <a href="plugins.html" class="btn btn-link active">Плагины</a>
+        <a href="tutorials.html" class="btn btn-link">Обучение</a>
+        <a href="contact.html" class="btn btn-link">Контакты</a>
+      </section>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="columns">
+      <!-- Сайдбар -->
+      <div class="column col-3">
+        <aside class="menu">
+          <p class="menu-label">Навигация</p>
+          <ul class="menu-list">
+            <li><a href="#section1" class="btn btn-link">VS Code</a></li>
+            <li><a href="#section2" class="btn btn-link">Sublime Text</a></li>
+            <li><a href="#section3" class="btn btn-link">Atom</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Контент -->
+      <div class="column col-9">
+        <h1>Плагины для веб-разработки</h1>
+        <p class="text-large">Лучшие расширения для популярных редакторов кода</p>
+
+        <!-- Секция 1: VS Code -->
+        <section id="section1" class="plugins-section">
+          <div class="text-right">
+            <span class="editor-badge">VS Code</span>
+          </div>
+          <div class="plugin-grid">
+            <div class="plugin-card">
+              <div class="plugin-header">
+                <img src="img/prettier.png" alt="Prettier" class="plugin-icon">
+                <h3>Prettier</h3>
+              </div>
+              <p>Форматер кода с поддержкой множества языков</p>
+              <div class="download-btn">
+                <span>★ 4.8M+ установок</span>
+                <a href="https://prettier.io/" target="_blank" class="btn btn-primary btn-sm">Установить</a>
+              </div>
+            </div>
+
+            <div class="plugin-card">
+              <div class="plugin-header">
+                <img src="img/eslint.png" alt="ESLint" class="plugin-icon">
+                <h3>ESLint</h3>
+              </div>
+              <p>Статический анализ кода JavaScript/TypeScript</p>
+              <div class="download-btn">
+                <span>★ 3.2M+ установок</span>
+                <a href="https://eslint.org/" target="_blank" class="btn btn-primary btn-sm">Установить</a>
+              </div>
+            </div>
+
+            <div class="plugin-card">
+              <div class="plugin-header">
+                <img src="img/Live Server.png" alt="Live Server" class="plugin-icon">
+                <h3>Live Server</h3>
+              </div>
+              <p>Локальный сервер с горячей перезагрузкой</p>
+              <div class="download-btn">
+                <span>★ 8.1M+ установок</span>
+                <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" 
+                   target="_blank" 
+                   class="btn btn-primary btn-sm">Установить</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 2: Sublime Text -->
+        <section id="section2" class="plugins-section">
+          <div class="text-right">
+            <span class="editor-badge" style="background: #FF9800;">Sublime Text</span>
+          </div>
+          <div class="plugin-grid">
+            <!-- Аналогичные карточки для Sublime Text -->
+            <div class="plugin-card">
+              <div class="plugin-header">
+                <img src="img/emmet.png" alt="Emmet" class="plugin-icon">
+                <h3>Emmet</h3>
+              </div>
+              <p>Быстрое написание HTML/CSS с помощью аббревиатур</p>
+              <div class="download-btn">
+                <span>★ 1.2M+ установок</span>
+                <a href="https://emmet.io/" target="_blank" class="btn btn-primary btn-sm">Установить</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 3: Atom -->
+        <section id="section3" class="plugins-section">
+          <div class="text-right">
+            <span class="editor-badge" style="background: #66595C;">Atom</span>
+          </div>
+          <div class="plugin-grid">
+            <!-- Аналогичные карточки для Atom -->
+            <div class="plugin-card">
+              <div class="plugin-header">
+                <img src="img/atom.png" alt="Atom Beautify" class="plugin-icon">
+                <h3>Atom Beautify</h3>
+              </div>
+              <p>Форматер кода для различных языков программирования</p>
+              <div class="download-btn">
+                <span>★ 850K+ установок</span>
+                <a href="https://atom.io/packages/atom-beautify" 
+                   target="_blank" 
+                   class="btn btn-primary btn-sm">Установить</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="container text-center">
+        <div class="divider"></div>
+        <p>© 2025 CodeEditors. Все права защищены.</p>
+        <p>
+          <a href="https://github.com/your-repo" target="_blank" class="btn btn-link">GitHub</a>
+          <a href="https://marketplace.visualstudio.com/" target="_blank" class="btn btn-link">VS Extensions</a>
+          <a href="https://packagecontrol.io/" target="_blank" class="btn btn-link">Sublime Packages</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

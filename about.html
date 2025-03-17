@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О проекте - CodeEditors</title>
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .about-section {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .member-card {
+      text-align: center;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    
+    .member-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .member-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+    }
+    
+    .goals-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .goals-list li {
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      background: white;
+      border-left: 4px solid #5755d9;
+      display: flex;
+      align-items: center;
+    }
+    
+    .goals-list li::before {
+      content: "►";
+      color: #5755d9;
+      margin-right: 1rem;
+    }
+    
+    .about-image {
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Шапка -->
+    <header class="navbar">
+      <section class="navbar-section">
+        <a href="index.html" class="navbar-brand">CodeEditors</a>
+      </section>
+      <section class="navbar-section">
+        <a href="index.html" class="btn btn-link">Главная</a>
+        <a href="about.html" class="btn btn-link active">О проекте</a>
+        <a href="editors.html" class="btn btn-link">Редакторы</a>
+        <a href="plugins.html" class="btn btn-link">Плагины</a>
+        <a href="tutorials.html" class="btn btn-link">Обучение</a>
+        <a href="contact.html" class="btn btn-link">Контакты</a>
+      </section>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="columns">
+      <!-- Сайдбар -->
+      <div class="column col-3">
+        <aside class="menu">
+          <p class="menu-label">Навигация</p>
+          <ul class="menu-list">
+            <li><a href="#section1" class="btn btn-link">О нас</a></li>
+            <li><a href="#section2" class="btn btn-link">Цели</a></li>
+            <li><a href="#section3" class="btn btn-link">Команда</a></li>
+            <li><a href="#section4" class="btn btn-link">История</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Контент -->
+      <div class="column col-9">
+        <h1>О проекте</h1>
+        <p class="text-large">Платформа для разработчиков с открытыми знаниями</p>
+
+        <!-- Секция 1: О нас -->
+        <section id="section1" class="about-section">
+          <h2>Наша миссия</h2>
+          <img src="img/code.jpg" alt="О проекте" class="about-image img-responsive">
+          <p>CodeEditors - это независимое сообщество разработчиков, созданное в 2020 году. Мы помогаем программистам выбирать оптимальные инструменты и повышать эффективность работы через:</p>
+          <ul class="goals-list">
+            <li>Обзоры редакторов кода и IDE</li>
+            <li>Рекомендации по плагинам и расширениям</li>
+            <li>Обучающие материалы и гайды</li>
+            <li>Сравнительный анализ технологий</li>
+          </ul>
+        </section>
+
+        <!-- Секция 2: Цели -->
+        <section id="section2" class="about-section">
+          <h2>Наши цели</h2>
+          <div class="columns">
+            <div class="column col-6">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Образование</h3>
+                </div>
+                <div class="card-body">
+                  Создаем бесплатные обучающие материалы для разработчиков всех уровней
+                </div>
+              </div>
+            </div>
+            <div class="column col-6">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Сообщество</h3>
+                </div>
+                <div class="card-body">
+                  Объединяем разработчиков для обмена опытом и знаниями
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 3: Команда -->
+        <section id="section3" class="about-section">
+          <h2>Наша команда</h2>
+          <div class="team-grid">
+            <div class="member-card">
+              <img src="img/team1.png" alt="Антно Бухманов" class="member-photo">
+              <h4>Антон Бухманов</h4>
+              <p class="text-gray">Основатель проекта</p>
+              <p>Full-stack разработчик без опытом</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 4: История -->
+        <section id="section4" class="about-section">
+          <h2>История развития</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-left">
+                <div class="timeline-icon"></div>
+              </div>
+              <div class="timeline-content">
+                <h4>2025 - Основание</h4>
+                <p>Старт проекта с небольшого блога о редакторах кода</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-left">
+                <div class="timeline-icon"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="container text-center">
+        <div class="divider"></div>
+        <p>© 2025 CodeEditors. Все права защищены.</p>
+        <p>
+          <a href="https://github.com/your-repo" target="_blank" class="btn btn-link">GitHub</a>
+          <a href="https://twitter.com/codeeditors" target="_blank" class="btn btn-link">Twitter</a>
+          <a href="docs.html" class="btn btn-link">Документация</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

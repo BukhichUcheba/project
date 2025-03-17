@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeEditors - Главная</title>
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .main-section {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .editor-card {
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.2s;
+      background: white;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    
+    .editor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .editor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .rating-stars {
+      color: #ffd700;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .table-enhanced {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+    }
+    
+    .table-enhanced th, .table-enhanced td {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    
+    .table-enhanced tr:hover {
+      background-color: #f5f6f7;
+    }
+    
+    .progress-bar {
+      height: 8px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Шапка -->
+    <header class="navbar">
+      <section class="navbar-section">
+        <a href="index.html" class="navbar-brand">CodeEditors</a>
+      </section>
+      <section class="navbar-section">
+        <a href="index.html" class="btn btn-link active">Главная</a>
+        <a href="about.html" class="btn btn-link">О проекте</a>
+        <a href="editors.html" class="btn btn-link">Редакторы</a>
+        <a href="plugins.html" class="btn btn-link">Плагины</a>
+        <a href="tutorials.html" class="btn btn-link">Обучение</a>
+        <a href="contact.html" class="btn btn-link">Контакты</a>
+      </section>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="columns">
+      <!-- Сайдбар -->
+      <div class="column col-3">
+        <aside class="menu">
+          <p class="menu-label">Навигация</p>
+          <ul class="menu-list">
+            <li><a href="#section1" class="btn btn-link">Редакторы</a></li>
+            <li><a href="#section2" class="btn btn-link">Рейтинг</a></li>
+            <li><a href="#section3" class="btn btn-link">Видео</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Контент -->
+      <div class="column col-9">
+        <section class="main-section">
+          <h1>Добро пожаловать в мир код-редакторов!</h1>
+          <p class="text-large">Редакторы с подсведкой кода. Плагины для Web-разработки</p>
+
+          <!-- Секция 1: Редакторы -->
+          <section id="section1">
+            <div class="editor-grid">
+              <div class="editor-card">
+                <img src="img/vscode.png" alt="VS Code" class="img-responsive">
+                <h3>Visual Studio Code</h3>
+                <div class="rating-stars">★★★★★</div>
+                <a href="https://code.visualstudio.com/" 
+                   target="_blank" 
+                   class="btn btn-primary btn-sm">
+                  Официальный сайт
+                </a>
+              </div>
+              
+              <div class="editor-card">
+                <img src="img/sublime.png" alt="Sublime Text" class="img-responsive">
+                <h3>Sublime Text</h3>
+                <div class="rating-stars">★★★★☆</div>
+                <a href="https://www.sublimetext.com/" 
+                   target="_blank" 
+                   class="btn btn-primary btn-sm">
+                  Официальный сайт
+                </a>
+              </div>
+              
+              <div class="editor-card">
+                <img src="img/atom.png" alt="Atom" class="img-responsive">
+                <h3>Atom</h3>
+                <div class="rating-stars">★★★★☆</div>
+                <a href="https://atom.io/" 
+                   target="_blank" 
+                   class="btn btn-primary btn-sm">
+                  Официальный сайт
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Секция 2: Рейтинг -->
+          <section id="section2" class="main-section">
+            <h2>Сравнение редакторов</h2>
+            <table class="table-enhanced">
+              <thead>
+                <tr>
+                  <th>Редактор</th>
+                  <th>Популярность</th>
+                  <th>Рейтинг</th>
+                  <th>Ссылка</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>VS Code</td>
+                  <td>
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 95%; background: #3b83f6">95%</div>
+                    </div>
+                  </td>
+                  <td class="rating-stars">★★★★★</td>
+                  <td>
+                    <a href="https://code.visualstudio.com/" 
+                       target="_blank" 
+                       class="btn btn-link">
+                      Перейти →
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Sublime Text</td>
+                  <td>
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 75%; background: #ff9800">75%</div>
+                    </div>
+                  </td>
+                  <td class="rating-stars">★★★★☆</td>
+                  <td>
+                    <a href="https://www.sublimetext.com/" 
+                       target="_blank" 
+                       class="btn btn-link">
+                      Перейти →
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Atom</td>
+                  <td>
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 60%; background: #66595c">60%</div>
+                    </div>
+                  </td>
+                  <td class="rating-stars">★★★★☆</td>
+                  <td>
+                    <a href="https://atom.io/" 
+                       target="_blank" 
+                       class="btn btn-link">
+                      Перейти →
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- Секция 3: Видео -->
+          <section id="section3" class="main-section">
+            <h2>Обучающие материалы</h2>
+            <div class="video-grid">
+              <div class="video-responsive">
+                <iframe src="https://vkvideo.ru/video_ext.php?oid=-209111268&id=456239138&hd=2&autoplay=1" width="560" height="315" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="video-responsive">
+                <iframe src="https://vkvideo.ru/video_ext.php?oid=-83675618&id=456239174&hd=2&autoplay=1" width="560" height="315" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="container text-center">
+        <div class="divider"></div>
+        <p>© 2025 CodeEditors. Все права защищены.</p>
+        <p>
+          <a href="https://github.com/your-repo" target="_blank" class="btn btn-link">GitHub</a>
+          <a href="https://twitter.com/codeeditors" target="_blank" class="btn btn-link">Twitter</a>
+          <a href="stats.html" class="btn btn-link">Статистика</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

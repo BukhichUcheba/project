@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Редакторы - CodeEditors</title>
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .editor-section {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .editor-card {
+      padding: 1.5rem;
+      background: white;
+      border-radius: 8px;
+      transition: transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .editor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .editor-badge {
+      position: absolute;
+      top: 10px;
+      right: -30px;
+      padding: 0.5rem 2rem;
+      background: #5755d9;
+      color: white;
+      transform: rotate(45deg);
+    }
+    
+    .editor-features {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    
+    .editor-features li {
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .editor-features li::before {
+      content: "✓";
+      color: #5755d9;
+      margin-right: 0.5rem;
+    }
+    
+    .editor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .editor-logo {
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+    }
+    
+    .comparison-table td, .comparison-table th {
+      padding: 1rem;
+      border: 1px solid #eee;
+      text-align: left;
+    }
+
+    .tech-specs {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .tech-specs li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .tech-specs li:last-child {
+      border-bottom: none;
+    }
+    
+    .tech-specs strong {
+      display: inline-block;
+      width: 160px;
+      color: #5755d9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Шапка -->
+    <header class="navbar">
+      <section class="navbar-section">
+        <a href="index.html" class="navbar-brand">CodeEditors</a>
+      </section>
+      <section class="navbar-section">
+        <a href="index.html" class="btn btn-link">Главная</a>
+        <a href="about.html" class="btn btn-link">О проекте</a>
+        <a href="editors.html" class="btn btn-link active">Редакторы</a>
+        <a href="plugins.html" class="btn btn-link">Плагины</a>
+        <a href="tutorials.html" class="btn btn-link">Обучение</a>
+        <a href="contact.html" class="btn btn-link">Контакты</a>
+      </section>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="columns">
+      <!-- Сайдбар -->
+      <div class="column col-3">
+        <aside class="menu">
+          <p class="menu-label">Навигация</p>
+          <ul class="menu-list">
+            <li><a href="#section1" class="btn btn-link">VS Code</a></li>
+            <li><a href="#section2" class="btn btn-link">Sublime Text</a></li>
+            <li><a href="#section3" class="btn btn-link">Atom</a></li>
+            <li><a href="#section4" class="btn btn-link">Сравнение</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Контент -->
+      <div class="column col-9">
+        <h1>Редакторы кода</h1>
+        <p class="text-large">Сравнение популярных редакторов для веб-разработки</p>
+
+        <!-- Секция 1: VS Code -->
+        <section id="section1" class="editor-section">
+          <div class="editor-badge">Популярный</div>
+          <div class="editor-grid">
+            <div class="editor-card">
+              <img src="img/vscode.png" alt="VS Code" class="editor-logo">
+              <h3>Visual Studio Code</h3>
+              <div class="editor-features">
+                <li>Встроенный Git</li>
+                <li>Интегрированный терминал</li>
+                <li>Поддержка расширений</li>
+                <li>Отладчик кода</li>
+              </div>
+              <div class="download-btn">
+                <a href="https://code.visualstudio.com/" 
+                   target="_blank" 
+                   class="btn btn-primary btn-block">
+                  Скачать (v1.85)
+                </a>
+              </div>
+            </div>
+            
+            <div class="editor-card">
+              <h4>Технические характеристики</h4>
+              <ul class="tech-specs">
+                <li><strong>Разработчик:</strong> Microsoft</li>
+                <li><strong>Первый выпуск:</strong> 2015</li>
+                <li><strong>Языки:</strong> 50+ (JavaScript, Python, Java, C++)</li>
+                <li><strong>Плагины:</strong> 50,000+</li>
+                <li><strong>Системные требования:</strong>
+                  <ul>
+                    <li>1.6 ГГц процессор</li>
+                    <li>1 ГБ ОЗУ</li>
+                    <li>200 МБ места</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 2: Sublime Text -->
+        <section id="section2" class="editor-section">
+          <div class="editor-badge" style="background: #FF9800;">Быстрый</div>
+          <div class="editor-grid">
+            <div class="editor-card">
+              <img src="img/sublime.png" alt="Sublime Text" class="editor-logo">
+              <h3>Sublime Text</h3>
+              <div class="editor-features">
+                <li>Мгновенная навигация</li>
+                <li>Множественный выбор</li>
+                <li>Производительность</li>
+                <li>Кастомизация</li>
+              </div>
+              <div class="download-btn">
+                <a href="https://www.sublimetext.com/" 
+                   target="_blank" 
+                   class="btn btn-primary btn-block">
+                  Скачать (v4.0)
+                </a>
+              </div>
+            </div>
+            
+            <div class="editor-card">
+              <h4>Технические характеристики</h4>
+              <ul class="tech-specs">
+                <li><strong>Разработчик:</strong> Sublime HQ</li>
+                <li><strong>Первый выпуск:</strong> 2008</li>
+                <li><strong>Языки:</strong> Все основные</li>
+                <li><strong>Плагины:</strong> 4,800+</li>
+                <li><strong>Системные требования:</strong>
+                  <ul>
+                    <li>Любой современный CPU</li>
+                    <li>512 МБ ОЗУ</li>
+                    <li>80 МБ места</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 3: Atom -->
+        <section id="section3" class="editor-section">
+          <div class="editor-badge" style="background: #66595C;">Гибкий</div>
+          <div class="editor-grid">
+            <div class="editor-card">
+              <img src="img/atom.png" alt="Atom" class="editor-logo">
+              <h3>Atom</h3>
+              <div class="editor-features">
+                <li>Встроенный менеджер пакетов</li>
+                <li>Git-интеграция</li>
+                <li>Темы оформления</li>
+                <li>Кроссплатформенность</li>
+              </div>
+              <div class="download-btn">
+                <a href="https://atom.io/" 
+                   target="_blank" 
+                   class="btn btn-primary btn-block">
+                  Скачать (v1.63)
+                </a>
+              </div>
+            </div>
+            
+            <div class="editor-card">
+              <h4>Технические характеристики</h4>
+              <ul class="tech-specs">
+                <li><strong>Разработчик:</strong> GitHub</li>
+                <li><strong>Первый выпуск:</strong> 2014</li>
+                <li><strong>Языки:</strong> 40+ (Web-стек)</li>
+                <li><strong>Плагины:</strong> 8,500+</li>
+                <li><strong>Системные требования:</strong>
+                  <ul>
+                    <li>2.0 ГГц процессор</li>
+                    <li>2 ГБ ОЗУ</li>
+                    <li>500 МБ места</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 4: Сравнение -->
+        <section id="section4" class="editor-section">
+          <h2>Сравнение редакторов</h2>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Характеристика</th>
+                <th>VS Code</th>
+                <th>Sublime Text</th>
+                <th>Atom</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Производительность</td>
+                <td>Высокая</td>
+                <td>Очень высокая</td>
+                <td>Средняя</td>
+              </tr>
+              <tr>
+                <td>Цена</td>
+                <td>Бесплатно</td>
+                <td>$99</td>
+                <td>Бесплатно</td>
+              </tr>
+              <tr>
+                <td>Открытый исходный код</td>
+                <td>✓</td>
+                <td>✗</td>
+                <td>✓</td>
+              </tr>
+              <tr>
+                <td>Время запуска</td>
+                <td>1-3 сек</td>
+                <td>0.5-1 сек</td>
+                <td>3-7 сек</td>
+              </tr>
+              <tr>
+                <td>Потребление памяти</td>
+                <td>300-500 МБ</td>
+                <td>50-150 МБ</td>
+                <td>500-800 МБ</td>
+              </tr>
+              <tr>
+                <td>Обновления</td>
+                <td>Ежемесячно</td>
+                <td>Раз в год</td>
+                <td>Не обновляется</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="container text-center">
+        <div class="divider"></div>
+        <p>© 2025 CodeEditors. Все права защищены.</p>
+        <p>
+          <a href="https://github.com/your-repo" target="_blank" class="btn btn-link">GitHub</a>
+          <a href="https://twitter.com/codeeditors" target="_blank" class="btn btn-link">Twitter</a>
+          <a href="stats.pdf" class="btn btn-link">Статистика</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

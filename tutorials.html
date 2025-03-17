@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обучение - CodeEditors</title>
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .learning-section {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin: 1rem 0;
+    }
+    
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+    }
+    
+    .article-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .article-item {
+      padding: 1rem;
+      margin: 0.5rem 0;
+      background: white;
+      border-radius: 4px;
+      transition: transform 0.2s;
+    }
+    
+    .article-item:hover {
+      transform: translateX(5px);
+    }
+    
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    
+    .resource-card {
+      padding: 1rem;
+      text-align: center;
+      background: white;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Шапка -->
+    <header class="navbar">
+      <section class="navbar-section">
+        <a href="index.html" class="navbar-brand">CodeEditors</a>
+      </section>
+      <section class="navbar-section">
+        <a href="index.html" class="btn btn-link">Главная</a>
+        <a href="about.html" class="btn btn-link">О проекте</a>
+        <a href="editors.html" class="btn btn-link">Редакторы</a>
+        <a href="plugins.html" class="btn btn-link">Плагины</a>
+        <a href="tutorials.html" class="btn btn-link active">Обучение</a>
+        <a href="contact.html" class="btn btn-link">Контакты</a>
+      </section>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="columns">
+      <!-- Сайдбар -->
+      <div class="column col-3">
+        <aside class="menu">
+          <p class="menu-label">Навигация</p>
+          <ul class="menu-list">
+            <li><a href="#section1" class="btn btn-link">Видеоуроки</a></li>
+            <li><a href="#section2" class="btn btn-link">Статьи</a></li>
+            <li><a href="#section3" class="btn btn-link">Ресурсы</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Контент -->
+      <div class="column col-9">
+        <h1>Обучение</h1>
+        <p class="text-large">Видеоуроки и статьи по работе с редакторами и плагинами.</p>
+
+        <!-- Секция 1: Видеоуроки -->
+        <section id="section1" class="learning-section">
+          <h2>Видеоуроки</h2>
+          <div class="video-responsive">
+            <iframe src="https://vkvideo.ru/video_ext.php?oid=-209111268&id=456239138&hd=2&autoplay=1" width="560" height="315" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-responsive">
+            <iframe src="https://vkvideo.ru/video_ext.php?oid=-83675618&id=456239174&hd=2&autoplay=1" width="560" height="315" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <!-- Секция 2: Статьи -->
+        <section id="section2" class="learning-section">
+          <h2>Полезные статьи</h2>
+          <ul class="article-list">
+            <li class="article-item">
+              <a href="#" class="text-bold">10 советов по настройке VS Code</a>
+              <p class="text-gray">Основы работы с популярным редактором</p>
+            </li>
+            <li class="article-item">
+              <a href="#" class="text-bold">Топ-20 плагинов для Sublime Text</a>
+              <p class="text-gray">Расширяем возможности редактора</p>
+            </li>
+            <li class="article-item">
+              <a href="#" class="text-bold">Работа с Git в Atom</a>
+              <p class="text-gray">Полное руководство по интеграции</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Секция 3: Ресурсы -->
+        <section id="section3" class="learning-section">
+          <h2>Дополнительные ресурсы</h2>
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h3>Официальная документация</h3>
+              <p>Руководства от разработчиков</p>
+              <a href="#" class="btn btn-primary">Перейти</a>
+            </div>
+            <div class="resource-card">
+              <h3>Шпаргалки</h3>
+              <p>Горячие клавиши для редакторов</p>
+              <a href="#" class="btn btn-primary">Скачать</a>
+            </div>
+            <div class="resource-card">
+              <h3>Сообщество</h3>
+              <p>Форум для разработчиков</p>
+              <a href="#" class="btn btn-primary">Присоединиться</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="container text-center">
+        <div class="divider"></div>
+        <p>© 2025 CodeEditors. Все права защищены.</p>
+        <p>
+          <a href="https://github.com/your-repo" target="_blank" class="btn btn-link">GitHub</a>
+          <a href="https://t.me/codeeditors" target="_blank" class="btn btn-link">Telegram</a>
+          <a href="docs.pdf" class="btn btn-link">Документация</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
